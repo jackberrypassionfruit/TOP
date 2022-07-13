@@ -1,3 +1,5 @@
+// Only thing I don't love about this is that the tournament at the end doesn't show te score in real time. Eh.
+
 function computerPlay()
 {
   const randint = Math.floor(Math.random() * 3);
@@ -22,40 +24,43 @@ function playRound(playerSelection, computerSelection)
 
   if ((plr == "rock" && cpu == "paper") || (plr == "paper" && cpu == "scissors") || (plr == "scissors" && cpu == "rock"))
   {
-    console.log(`You Win! ${plr} beats ${cpu}`)
+    document.querySelector('#result').innerText = `You Win! ${plr} beats ${cpu}`;
     return 1;
   }
 
   else if ((plr == "paper" && cpu == "rock") || (plr == "scissors" && cpu == "paper") || (plr == "rock" && cpu == "scissors"))
   {
-    console.log(`You Lose! ${cpu} beats ${plr}`);
+    document.querySelector('#result').innerText = `You Lose! ${plr} loses to ${cpu}`;
     return -1;
   }
 
   else
   {
-    console.log("it's a tie");
+    document.querySelector('#result').innerText = "it's a tie";
     return 0;
   }
 }
+
 function game()
 {
   let plrWins = 0;
   let cpuWins = 0;
-  for (let i = 0; i < 5; i++)
+  while (plrWins < 5 && cpuWins < 5)
   {
+    
     plrMove = prompt('Make your move');
 
     score = playRound(plrMove, computerPlay());
-    console.log(score)
 
     switch (score)
     {
       case 1:
         plrWins++;
+        document.querySelector('#plr1').innerHTML = plrWins;
         break;
       case -1:
         cpuWins++;
+        document.querySelector('#plr2').innerHTML = cpuWins;
         break;
     }
   }
@@ -76,5 +81,33 @@ function game()
     console.log('How did you end up in a draw? I mean seriously')
   }
 
-  return `Player 1: ${plrWins} --- Player 2: ${cpuWins}`
+  // return `Player 1: ${plrWins} --- Player 2: ${cpuWins}`
 }
+
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+
+rock.addEventListener('click', addPlay, false);
+paper.addEventListener('click', addPlay, false);
+scissors.addEventListener('click', addPlay, false);
+
+function addPlay(e)
+{
+  playRound(e.currentTarget.classList[1], computerPlay());
+}
+
+// "Less Smart" Way , without using the clicing target
+
+// rock.addEventListener('click', () => {
+//   playRound('rock', computerPlay());
+// });
+
+// paper.addEventListener('click', () => {
+//   playRound('paper', computerPlay());
+// });
+
+// scissors.addEventListener('click', () => {
+//   playRound('scissors', computerPlay());
+// });
+
