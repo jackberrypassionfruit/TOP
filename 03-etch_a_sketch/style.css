@@ -1,0 +1,18 @@
+.outer-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.block {
+  background-color: blue;
+  height: 3vw;
+  width: 3vw;
+  border-radius: 3px;
+  /* border-width: 3px;
+  border-color: 3px; */
+}
+/* 
+.block:hover {
+  background-color: green;;
+} */
