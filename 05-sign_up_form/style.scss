@@ -1,0 +1,123 @@
+:root {
+  --bg-pink: rgb(254, 229, 229);
+}
+
+@font-face {
+  font-family: 'playfair';
+  src: url('assets/PlayfairDisplaySC-Bold.otf');
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('assets/Montserrat-Medium.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat";
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.leftbar {
+  height: 100vh;
+  position: relative;
+  width: fit-content;
+
+  .image{height: 100vh;}
+
+  .logo {
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 10%;
+    background: rgba(200, 54, 54, 0.8);
+    padding: 1vh;
+    border-radius: 25px;
+    border: .2rem solid black;
+    width: 40vh;
+    text-align: center;
+    
+    * {
+      display: inline;
+      vertical-align: middle;
+    }
+    img {
+      height: 4vh;
+    }
+    div {
+      font-size: 3vh;
+      font-family: "playfair";
+    }
+  }
+}
+
+.rightbar {
+  * {
+    padding: 1.5vh;
+  }
+
+  .instructions {
+    background-color: var(--bg-pink);
+  }
+  
+  .instructions p, form {
+    width: min(calc(100vw - 650px), 65vh);
+  }
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    input {
+      border-radius: 10px;
+      box-shadow: 5px 5px rgba(128, 124, 124, 0.373);
+    }
+
+    // Selecting Password div
+    :nth-child(5) {
+
+      :not(:placeholder-shown):valid {
+        border: .2rem solid green;
+      }
+      :not(:placeholder-shown):invalid {
+        border: .2rem solid red;
+      }
+    }
+
+    // Selecting Confirm div
+    :nth-child(6) {
+
+      :not(:placeholder-shown):valid {
+        border: .2rem solid green;
+      }
+      :not(:placeholder-shown):invalid {
+        border: .2rem solid red;
+      }
+    }
+  
+  }
+  input, label {
+    display: block;
+  }
+  
+  // idk how to style this damn input
+  input {
+    line-height: 0.05rem;
+  }
+
+  .submission {
+    background-color: var(--bg-pink);
+
+    button {
+      margin-left: 3vh;
+    }
+  }
+}
+

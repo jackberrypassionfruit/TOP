@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sign-Up Form</title>
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="leftbar">
+      <img class="image" src="assets/flowers.jpg" alt="Some flowers">
+      <div class="logo">
+        <img class="mush" src="assets/mushroom.png" alt="Mushy">
+        <div>Jack's All You Can Eat Vegan Diner</div>
+      </div>
+    </div>
+
+    <div class="rightbar">
+      <div class="instructions">
+        <p>Welcome to Jack's Vegan Barbecue! Cooking up the most wholesome, belt-busting meals in the New England area.</p>
+        <p>Because we're very popular (and we know you'll be back), you'll have to make an online account with up to book your reservation</p>
+      </div>
+      <div class="forms">
+        <p>Let's start!</p>
+        <form action="" name="register" id="register" method="post">
+          <div>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name">
+          </div>
+          <div>
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name">
+          </div>
+          <div>
+            <label for="phone_num">Phone Number</label>
+            <input type="text" id="phone_num">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email">
+          </div><div>
+            <label for="passwd">Password</label>
+            <input type="text" id="passwd" minlength="4" placeholder="Password" required>
+            <p>Passwords do not match</p>
+          </div>
+          <div>
+            <label for="confirm_pwd">Please Confirm Password</label>
+            <input type="text" id="confirm_pwd" minlength="4" placeholder="Confirm Password" required >
+          </div>
+        </form>
+      </div>
+      <div class="submission">
+        <button type="submit" form="register">Register</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+</html>

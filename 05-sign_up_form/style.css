@@ -1,0 +1,100 @@
+:root {
+  --bg-pink: rgb(254, 229, 229);
+}
+
+@font-face {
+  font-family: "playfair";
+  src: url("assets/PlayfairDisplaySC-Bold.otf");
+}
+@font-face {
+  font-family: "montserrat";
+  src: url("assets/Montserrat-Medium.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat";
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.leftbar {
+  height: 100vh;
+  position: relative;
+  width: fit-content;
+}
+.leftbar .image {
+  height: 100vh;
+}
+.leftbar .logo {
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  left: 10%;
+  background: rgba(200, 54, 54, 0.8);
+  padding: 1vh;
+  border-radius: 25px;
+  border: 0.2rem solid black;
+  width: 40vh;
+  text-align: center;
+}
+.leftbar .logo * {
+  display: inline;
+  vertical-align: middle;
+}
+.leftbar .logo img {
+  height: 4vh;
+}
+.leftbar .logo div {
+  font-size: 3vh;
+  font-family: "playfair";
+}
+
+.rightbar * {
+  padding: 1.5vh;
+}
+.rightbar .instructions {
+  background-color: var(--bg-pink);
+}
+.rightbar .instructions p, .rightbar form {
+  width: min(100vw - 650px, 65vh);
+}
+.rightbar form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.rightbar form input {
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(128, 124, 124, 0.373);
+}
+.rightbar form :nth-child(5) :not(:placeholder-shown):valid {
+  border: 0.2rem solid green;
+}
+.rightbar form :nth-child(5) :not(:placeholder-shown):invalid {
+  border: 0.2rem solid red;
+}
+.rightbar form :nth-child(6) :not(:placeholder-shown):valid {
+  border: 0.2rem solid green;
+}
+.rightbar form :nth-child(6) :not(:placeholder-shown):invalid {
+  border: 0.2rem solid red;
+}
+.rightbar input, .rightbar label {
+  display: block;
+}
+.rightbar input {
+  line-height: 0.05rem;
+}
+.rightbar .submission {
+  background-color: var(--bg-pink);
+}
+.rightbar .submission button {
+  margin-left: 3vh;
+}
+
+/*# sourceMappingURL=style.css.map */
