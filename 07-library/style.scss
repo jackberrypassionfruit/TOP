@@ -1,0 +1,68 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top-banner {
+  background-color: rgba(252, 202, 210, 0.646);
+  vertical-align: middle;
+  
+  * {
+    display: inline;
+    vertical-align: middle;
+  }
+  img {height: 10vh}
+  p {font-size: 3rem}
+}
+
+.library {
+  display: flex;
+  flex-flow: row wrap;
+
+  .card {
+    border: .2rem solid black;
+    margin: 1rem;
+    padding: .5rem;
+
+    .image {
+      border: .1rem solid red;
+      height: 4em;
+    }
+  }
+}
+
+.newBook{
+
+  background-color: rgb(191, 191, 191);
+  padding: 0.5rem;
+
+  .addBook {
+
+  }
+
+  form {
+
+    display: flex;
+    flex-flow: row wrap;
+
+    * {
+      display: block;
+      margin: .3rem;
+    }
+  }
+  
+}
+
+
+.footer {
+  
+  background-color: rgba(252, 202, 210, 0.646);
+  position: absolute;
+  bottom: 0px;
+  padding: 0.5rem;
+
+  * {
+    display: inline;
+  }
+  p {font-size: 2rem}
+}

@@ -1,0 +1,61 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top-banner {
+  background-color: rgba(252, 202, 210, 0.646);
+  vertical-align: middle;
+}
+.top-banner * {
+  display: inline;
+  vertical-align: middle;
+}
+.top-banner img {
+  height: 10vh;
+}
+.top-banner p {
+  font-size: 3rem;
+}
+
+.library {
+  display: flex;
+  flex-flow: row wrap;
+}
+.library .card {
+  border: 0.2rem solid black;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.library .card .image {
+  border: 0.1rem solid red;
+  height: 4em;
+}
+
+.newBook {
+  background-color: rgb(191, 191, 191);
+  padding: 0.5rem;
+}
+.newBook form {
+  display: flex;
+  flex-flow: row wrap;
+}
+.newBook form * {
+  display: block;
+  margin: 0.3rem;
+}
+
+.footer {
+  background-color: rgba(252, 202, 210, 0.646);
+  position: absolute;
+  bottom: 0px;
+  padding: 0.5rem;
+}
+.footer * {
+  display: inline;
+}
+.footer p {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

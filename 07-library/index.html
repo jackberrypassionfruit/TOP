@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Library</title>
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="top-banner">
+      <img src="assets/library.png" alt="library icon">
+      <p>Jack's Library</p>
+    </div>
+
+    <div class="library">
+      <!-- Erased Immediately now, so just example -->
+      <div class="card example">
+        <div class="title">"Title here"</div>
+        <div class="image"><em><h3>Cover Image here</h3></em></div>
+        <div class="author">By "Author name here"</div>
+        <div class="pg-num">"Page # here"</div>
+        <div class="read">"Read/Not Read here"</div>
+      </div>
+      <!-- New Books added here -->
+    </div>
+
+    <div class="newBook">
+      <button class="addBook">Want to add a new Book?</button>
+      <form action="#">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title">
+        </div>
+        <div>
+          <label for="author">Author:</label>
+          <input type="text" id="author">
+        </div>
+        <div>
+          <label for="pages"># of Pages</label>
+          <input type="text" id="pages">
+        </div>
+        <div>
+          <label for="read">Read/Not Read?</label>
+          <input type="text" id="read">
+        </div>
+        <button type="reset" class="pushBook">Add</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>Designed with Love by Jack Pashayan</p>
+    </div>
+  </div>
+</body>
+
+
+<script src="script.js"></script>
+</html>
