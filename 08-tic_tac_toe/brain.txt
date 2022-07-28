@@ -1,0 +1,25 @@
+Brainstorming ideas for UI in tic tac toe design
+
+- Must have buttons on each place, 9 in total
+- Must only have button where X nor O exist
+- 
+
+
+Jobs for each module/factory:
+
+gameBoard
+- place Xs or Os on the board
+- check for winner
+- clear board
+
+displayController
+- render gameBoard for webpage
+  - Each space should have a button with event listener
+- clear gameBoard from window
+- execute start/restart button
+
+
+player
+- make move on board
+- accept name from user
+- 

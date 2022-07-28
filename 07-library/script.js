@@ -23,7 +23,8 @@ function Book(title, author, pages, read) {
     }
 }
 
-// Creating 2 functions to add books to library 
+// Creating 2 functions to add books to librar
+// Didn't use
 function addBookToLibrary(book) {
   myLibrary.push(book);
 }
