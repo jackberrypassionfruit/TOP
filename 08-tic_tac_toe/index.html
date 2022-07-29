@@ -15,9 +15,33 @@
       <img src="assets/Tic Tac Toe.ico" alt="tic tac toe icon">
       <p>Jack's Tic Tac Toe Game</p>
     </div>
-    <div class="gBoard">
-      <!-- Use javascript to show game board so I don't have to -->
-    
+    <div class="main">
+      <div class="gBoard">
+        <!-- Use javascript to show game board so I don't have to -->
+      
+      </div>
+      <div class="players">
+        <form action="">
+          <label for="names1"></label>
+          <input type="text" id="names1" placeholder="Who is playing?">
+          <button type="reset" id="addPlayer1">add</button>
+        </form>
+        <p>Player 1: <span id="plr1"></span></p>
+        
+        <br>
+        <form action="">
+          <label for="names2"></label>
+          <input type="text" id="names2" placeholder="Who is playing?">
+          <button type="reset" id="addPlayer2">add</button>
+        </form>
+        <p>Player 2: <span id="plr2"></span></p>
+        <br>
+        <button id="go">Start / Restart</button>
+        <div class="winBox">
+          winbox
+          <!-- When you win, say it hear -->
+        </div>
+      </div>
     </div>
     <div class="footer">
       <p>
