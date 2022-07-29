@@ -1,7 +1,18 @@
+:root {
+  --gb-size: 60vh;
+  --box-size: 10vh;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 .title {
   background-color: rgba(172, 172, 172, 0.378);
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(80, 79, 79, 0.378);
-  padding: 0.4rem;
+  padding: 0.5rem;
   border-radius: 4em;
   text-align: center;
   display: flex;
@@ -17,6 +28,37 @@
 }
 .title p {
   font-size: 2.5rem;
+}
+
+.gBoard {
+  margin: 2rem;
+  border: 0.5rem solid black;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  width: var(--gb-size);
+  height: var(--gb-size);
+}
+.gBoard .row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+.gBoard .box {
+  border: 0.1rem solid black;
+  margin: 0.3rem;
+  width: var(--box-size);
+  height: var(--box-size);
+}
+.gBoard .btn {
+  width: 100%;
+  height: 100%;
+  font-size: 3.5rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
