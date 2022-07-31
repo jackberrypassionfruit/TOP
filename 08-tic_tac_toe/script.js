@@ -3,6 +3,11 @@ const gameBoard = (() => {
   // private methods
   let board = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]];
 
+  function clearBoard() {
+    gameBoard.board = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]];
+  }
+  
+
   function checkWin(board) {
     // Check for wins horizontally
     for (let i = 0; i<3; i++) {
@@ -31,7 +36,8 @@ const gameBoard = (() => {
     // public methods
     board,
     update,
-    checkWin
+    checkWin,
+    clearBoard
   };
 })();
 
@@ -58,6 +64,8 @@ const displayController = (() => {
   
   function renderBoard(board) {
     const gBoard = document.getElementsByClassName("gBoard")[0];
+    
+    gBoard.innerHTML = '';
 
     for (let i = 0; i < 3; i++) {
       const row = document.createElement('div');
@@ -73,6 +81,7 @@ const displayController = (() => {
             const turn = _turn(board);
             button.textContent = turn;
             gameBoard.update(i, j, turn);
+            console.table(gameBoard.board);
           }
         })
         row.appendChild(button);
@@ -96,7 +105,10 @@ const playerFactory = (name, turn) => {
   }
   
   // return all relavent propeties and methods
-  return {name};
+  return {
+    name, 
+    win
+  };
 }
 
 // Main Script
@@ -115,4 +127,9 @@ addPlayer2.addEventListener('click', (e) => {
 
 })
 
-
+const start = document.getElementById('go');
+start.addEventListener('click', (e) => {
+  //Trying to clear the board for a new game, screws everything up
+  // I think it has to do with the function scope, and how board = [...] doesn't apply everywhere
+  displayController.renderBoard(gameBoard.board);
+});
