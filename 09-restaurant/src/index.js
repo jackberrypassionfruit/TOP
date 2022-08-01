@@ -16,3 +16,4 @@ import printMe from './print.js';
  }
 
  document.body.appendChild(component());
+ console.log("poop");
