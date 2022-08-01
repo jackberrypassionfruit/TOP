@@ -1,0 +1,12 @@
+body { 
+  background: url('./restaurant.png');
+  background-size:cover;
+}
+.container {
+  * {
+    display: inline;
+  }
+  img {
+    height: 20vh;
+  }
+}
