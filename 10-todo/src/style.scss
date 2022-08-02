@@ -25,19 +25,31 @@ body > div > div > div{
     .left-bar {
 
       background-color: rgba(227, 227, 227, 0.949);
+      padding: .5rem;
 
-      ul {
+      .categories{
         background-color: white;
         border-radius: 1em;
         padding: .5em;
-        list-style: none;
+        display: flex;
+        flex-flow: column nowrap;
 
-        li {
-          font-size: 1.6em;
-          width: 8em;
+        .btn {
+          font-size: 1.4em;
+          width: fit-content;
           border: .05em solid black;
+          border-radius: .2em;
           margin: .2em;
           padding: .1em;
+          transition: 100ms background-color;
+        }
+
+        .btn:hover {
+          background-color:rgba(172, 172, 172, 0.949)
+        }
+
+        .btn:active {
+          background-color:rgba(139, 139, 139, 0.949)
         }
       }
     }
@@ -53,6 +65,7 @@ body > div > div > div{
 
       li {
         margin-bottom: 1em;
+        list-style: none;
 
         .done {
           height: .9rem;
@@ -67,12 +80,6 @@ body > div > div > div{
           border-bottom: .05rem solid black;
         }
       }
-      
-      #test {
-        list-style: none;
-
-      }
     }
   }
-
 }

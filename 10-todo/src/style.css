@@ -23,19 +23,29 @@ body > div > div > div {
 }
 .container .main .left-bar {
   background-color: rgba(227, 227, 227, 0.949);
+  padding: 0.5rem;
 }
-.container .main .left-bar ul {
+.container .main .left-bar .categories {
   background-color: white;
   border-radius: 1em;
   padding: 0.5em;
-  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
 }
-.container .main .left-bar ul li {
-  font-size: 1.6em;
-  width: 8em;
+.container .main .left-bar .categories .btn {
+  font-size: 1.4em;
+  width: fit-content;
   border: 0.05em solid black;
+  border-radius: 0.2em;
   margin: 0.2em;
   padding: 0.1em;
+  transition: 100ms background-color;
+}
+.container .main .left-bar .categories .btn:hover {
+  background-color: rgba(172, 172, 172, 0.949);
+}
+.container .main .left-bar .categories .btn:active {
+  background-color: rgba(139, 139, 139, 0.949);
 }
 .container .main .right-bar {
   width: 100%;
@@ -46,6 +56,7 @@ body > div > div > div {
 }
 .container .main .right-bar li {
   margin-bottom: 1em;
+  list-style: none;
 }
 .container .main .right-bar li .done {
   height: 0.9rem;
@@ -57,9 +68,6 @@ body > div > div > div {
 .container .main .right-bar li span {
   padding: 0.6rem;
   border-bottom: 0.05rem solid black;
-}
-.container .main .right-bar #test {
-  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */
