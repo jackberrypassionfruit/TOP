@@ -1,0 +1,78 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body > div > div > div{
+  border: .1rem solid black;
+}
+
+.container {
+  height: 100%;
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    .left-bar {
+
+      background-color: rgba(227, 227, 227, 0.949);
+
+      ul {
+        background-color: white;
+        border-radius: 1em;
+        padding: .5em;
+        list-style: none;
+
+        li {
+          font-size: 1.6em;
+          width: 8em;
+          border: .05em solid black;
+          margin: .2em;
+          padding: .1em;
+        }
+      }
+    }
+
+    .right-bar {
+
+      width: 100%;
+      padding: 1em;
+
+      h2 {
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 1em;
+
+        .done {
+          height: .9rem;
+          width: .9rem;
+          border: .05rem solid black;
+          border-radius: 100%;
+          margin: .2rem;
+        }
+
+        span {
+          padding: .6rem;
+          border-bottom: .05rem solid black;
+        }
+      }
+      
+      #test {
+        list-style: none;
+
+      }
+    }
+  }
+
+}
