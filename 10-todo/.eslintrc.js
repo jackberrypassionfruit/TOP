@@ -11,5 +11,10 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'no-restricted-syntax': 'off',
+    'max-classes-per-file': 'off',
+    'class-methods-use-this': 'off',
+    'brace-style': 'off',
+    'guard-for-in': 'off',
   },
 };
